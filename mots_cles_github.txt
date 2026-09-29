@@ -1,0 +1,549 @@
+FICHE GIT — COMMANDES CLASSÉES DE LA PLUS UTILISÉE À LA MOINS UTILISÉE
+======================================================================
+
+
+1. git status
+-------------
+
+=> Voir l'état actuel du projet.
+
+Permet de voir :
+- les fichiers modifiés
+- les fichiers ajoutés
+- les fichiers non suivis
+- la branche actuelle
+
+Exemple :
+git status
+
+
+2. git add
+----------
+
+=> Préparer les modifications pour le commit.
+
+Pour un fichier :
+git add fichier.java
+
+Pour tous les fichiers :
+git add .
+
+À retenir :
+=> "Je prépare mes modifications."
+
+
+3. git commit
+-------------
+
+=> Enregistrer les modifications dans Git.
+
+Exemple :
+git commit -m "Correction du programme"
+
+À retenir :
+=> "Je sauvegarde mes modifications dans Git."
+
+IMPORTANT :
+Un commit n'envoie PAS les modifications sur GitHub.
+
+
+4. git push
+-----------
+
+=> Envoyer les commits vers GitHub.
+
+Exemple :
+git push
+
+À retenir :
+=> "J'envoie mon travail sur GitHub."
+
+PC -> GitHub
+
+
+5. git pull
+-----------
+
+=> Récupérer les modifications de GitHub et les intégrer.
+
+Exemple :
+git pull
+
+À retenir :
+=> "Je récupère les dernières modifications."
+
+GitHub -> PC
+
+
+6. git clone
+------------
+
+=> Télécharger/copie un projet Git existant sur son PC.
+
+Exemple :
+git clone https://github.com/nom/projet.git
+
+À retenir :
+=> "Je récupère un projet existant."
+
+
+7. git switch
+-------------
+
+=> Changer de branche.
+
+Exemple :
+git switch main
+
+Créer une branche et aller dessus :
+git switch -c nouvelle-branche
+
+À retenir :
+=> "Je change de branche."
+
+
+8. git branch
+-------------
+
+=> Afficher ou gérer les branches.
+
+Voir les branches :
+git branch
+
+Créer une branche :
+git branch nouvelle-branche
+
+Supprimer une branche :
+git branch -d nouvelle-branche
+
+À retenir :
+=> "Je gère mes branches."
+
+
+9. git merge
+------------
+
+=> Fusionner une branche avec la branche actuelle.
+
+Exemple :
+
+git switch main
+git merge nouvelle-branche
+
+À retenir :
+=> "Je rassemble deux branches."
+
+
+10. git diff
+------------
+
+=> Voir exactement ce qui a été modifié.
+
+Exemple :
+git diff
+
+À retenir :
+=> "Qu'est-ce que j'ai changé ?"
+
+
+11. git log
+-----------
+
+=> Voir l'historique des commits.
+
+Exemple :
+git log
+
+Version plus simple :
+git log --oneline
+
+À retenir :
+=> "Je regarde les anciennes sauvegardes."
+
+
+12. git fetch
+------------
+
+=> Récupérer les nouveautés du dépôt distant sans les intégrer directement.
+
+Exemple :
+git fetch
+
+À retenir :
+=> "Je récupère les informations de GitHub sans modifier directement ma branche."
+
+
+DIFFÉRENCE :
+
+git fetch
+=> récupère les nouveautés sans les intégrer.
+
+git pull
+=> récupère les nouveautés ET les intègre.
+
+
+13. git restore
+---------------
+
+=> Annuler les modifications locales d'un fichier.
+
+Exemple :
+git restore fichier.java
+
+À retenir :
+=> "J'annule mes modifications."
+
+ATTENTION :
+Les modifications annulées peuvent être perdues.
+
+
+14. git remote
+--------------
+
+=> Gérer les dépôts distants.
+
+Voir le dépôt distant :
+git remote -v
+
+À retenir :
+=> "À quel dépôt distant mon projet est-il connecté ?"
+
+
+15. git checkout
+---------------
+
+=> Ancienne commande qui permet notamment de changer de branche.
+
+Exemple :
+git checkout main
+
+Créer une branche et aller dessus :
+git checkout -b nouvelle-branche
+
+À retenir :
+=> "Je change de branche."
+
+Aujourd'hui, on utilise souvent git switch pour changer de branche.
+
+
+16. git init
+------------
+
+=> Créer un dépôt Git dans le dossier actuel.
+
+Exemple :
+git init
+
+À retenir :
+=> "Je transforme ce dossier en projet Git."
+
+
+17. git stash
+------------
+
+=> Mettre temporairement de côté ses modifications.
+
+Exemple :
+git stash
+
+Récupérer les modifications :
+git stash pop
+
+À retenir :
+=> "Je mets mon travail de côté temporairement."
+
+
+18. git reset
+------------
+
+=> Revenir en arrière ou retirer un fichier du staging.
+
+Exemple :
+git reset fichier.java
+
+À retenir :
+=> "Je retire ce fichier de ce qui est préparé pour le commit."
+
+
+19. git config
+-------------
+
+=> Configurer Git.
+
+Exemple :
+git config --global user.name "Mon Nom"
+
+git config --global user.email "mon@email.com"
+
+À retenir :
+=> "Je configure Git."
+
+
+20. git rm
+----------
+
+=> Supprimer un fichier et indiquer sa suppression à Git.
+
+Exemple :
+git rm fichier.java
+
+À retenir :
+=> "Je supprime un fichier."
+
+
+21. git mv
+----------
+
+=> Renommer ou déplacer un fichier.
+
+Exemple :
+git mv ancien.java nouveau.java
+
+À retenir :
+=> "Je déplace ou renomme un fichier."
+
+
+22. git show
+------------
+
+=> Voir les détails d'un commit.
+
+Exemple :
+git show
+
+À retenir :
+=> "Je regarde précisément ce qu'un commit contient."
+
+
+23. git tag
+-----------
+
+=> Ajouter une étiquette à un commit, souvent pour une version.
+
+Exemple :
+git tag v1.0
+
+À retenir :
+=> "Je marque une version importante."
+
+
+24. git rebase
+-------------
+
+=> Replacer une branche sur une autre base.
+
+Exemple :
+git switch ma-branche
+git rebase main
+
+À retenir :
+=> "Je replace ma branche à partir d'une autre branche."
+
+ATTENTION :
+Commande plus avancée.
+
+
+25. git cherry-pick
+------------------
+
+=> Prendre un commit précis et l'appliquer sur la branche actuelle.
+
+Exemple :
+git cherry-pick abc123
+
+À retenir :
+=> "Je récupère uniquement ce commit."
+
+
+26. resolve
+-----------
+
+=> Ce n'est PAS une commande Git.
+
+"Resolve" signifie résoudre un conflit Git.
+
+Un conflit arrive lorsque Git ne sait pas quelle modification conserver.
+
+Après avoir corrigé le conflit :
+
+git add .
+git commit -m "Résolution du conflit"
+
+À retenir :
+=> "Je règle un conflit."
+
+
+27. rod
+-------
+
+=> Ce n'est PAS une commande Git connue.
+
+Il s'agit probablement d'une faute de frappe.
+
+
+====================================================
+LES COMMANDES À CONNAÎTRE EN PRIORITÉ
+====================================================
+
+Pour débuter, retiens surtout celles-ci :
+
+1. git status
+=> Voir l'état du projet.
+
+2. git add .
+=> Préparer les modifications.
+
+3. git commit -m "message"
+=> Enregistrer les modifications.
+
+4. git push
+=> Envoyer sur GitHub.
+
+5. git pull
+=> Récupérer les modifications de GitHub.
+
+6. git clone
+=> Récupérer un projet existant.
+
+7. git switch
+=> Changer de branche.
+
+8. git branch
+=> Gérer les branches.
+
+9. git merge
+=> Fusionner des branches.
+
+10. git diff
+=> Voir les modifications.
+
+
+====================================================
+ORDRE CLASSIQUE D'UTILISATION
+====================================================
+
+git status
+=> Je regarde l'état du projet.
+
+git add .
+=> Je prépare mes modifications.
+
+git commit -m "Mon message"
+=> J'enregistre mes modifications.
+
+git push
+=> J'envoie mes modifications sur GitHub.
+
+
+====================================================
+BRANCHES
+====================================================
+
+Créer une branche :
+
+git switch -c ma-branche
+
+Travailler sur la branche.
+
+Enregistrer les modifications :
+
+git add .
+git commit -m "Ma modification"
+
+Retourner sur main :
+
+git switch main
+
+Fusionner la branche :
+
+git merge ma-branche
+
+Envoyer sur GitHub :
+
+git push
+
+
+====================================================
+RÉSUMÉ TRÈS SIMPLE
+====================================================
+
+status
+=> voir
+
+add
+=> préparer
+
+commit
+=> sauvegarder
+
+push
+=> envoyer
+
+pull
+=> récupérer
+
+clone
+=> télécharger un projet
+
+switch
+=> changer de branche
+
+branch
+=> gérer les branches
+
+merge
+=> fusionner
+
+diff
+=> comparer
+
+log
+=> voir l'historique
+
+fetch
+=> récupérer sans intégrer
+
+restore
+=> annuler
+
+remote
+=> gérer le dépôt distant
+
+checkout
+=> changer de branche (ancienne commande)
+
+init
+=> créer un dépôt Git
+
+stash
+=> mettre de côté
+
+reset
+=> revenir en arrière / retirer du staging
+
+config
+=> configurer Git
+
+rm
+=> supprimer
+
+mv
+=> déplacer / renommer
+
+show
+=> voir un commit
+
+tag
+=> marquer une version
+
+rebase
+=> replacer une branche sur une autre base
+
+cherry-pick
+=> récupérer un commit précis
+
+resolve
+=> résoudre un conflit
+
+rod
+=> pas une commande Git connue
