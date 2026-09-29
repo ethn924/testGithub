@@ -1,0 +1,51 @@
+LOT 11 - mieux résoudre les conflits - Corentin et Ethan
+
+Première commande :
+
+git mergetool : Tout simplement, quand on fait un git merge et qu'il y a un conflit, on peut utiliser cette commande, elle sert à voir visuellement les différences entre fichier, permettant de choisir quoi garder donc de résoudre des conflits de fusion.
+
+deuxième commande : 
+
+git difftool : elle sert à comparer visuellement les modifs entre la version actuelle et une autre version, quand on tape cette commande, un outil s'ouvre et montre ce qui a été ajouté, supprimé et modifié
+
+troisième commande :
+
+git rerere : cette commande sert à mémoriser comment un conflit a été résolu
+
+supposons qu'il y a un conflit lors d'un merge, il est résolu manuellement, donc git va enregistrer la résolution et la réappliquer automatiquement si besoin, cela donne une mémoire à git
+
+Commandes bonus :
+
+git checkout --ours et git checkout --theirs : Lors d'un conflit de merge, git ne sait pas vraiment qquelle version du fichier garder, donc ces 2 commandes permettent de choisir.
+
+Tout simplement : git checkout --ours garde la version de la branche sur laquelle on est actuellement et git checkout --theirs garde la version de la branche qu'on essaie de fusionner
+
+Exemple concret :
+
+Je travaille sur la branche `master` et Corentin travaille sur la branche `dev`.
+
+Je modifie une ligne dans `test.txt` et Corentin modifie la même ligne de son côté.
+
+Je fais ensuite :
+
+git merge dev
+
+Git détecte un conflit car nous avons tous les deux modifié la même ligne.
+
+Je peux alors utiliser :
+
+* `git mergetool` pour voir les deux versions et choisir quoi garder.
+* `git difftool` pour voir les différences entre les versions.
+* `git rerere` pour que Git mémorise la résolution du conflit.
+* `git checkout --ours` pour garder ma version.
+* `git checkout --theirs` pour garder la version de Corentin.
+
+Une fois le conflit réglé :
+
+git add test.txt
+git commit
+
+Le conflit est terminé.
+
+
+
