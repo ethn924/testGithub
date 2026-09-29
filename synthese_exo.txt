@@ -1,0 +1,111 @@
+SYNTHÈSE EXERCICE GIT
+
+1. CRÉER LE PROJET
+
+git init
+git add .
+git commit -m "Creation du projet"
+
+→ Création du dépôt Git et premier commit.
+
+2. CRÉER LES BRANCHES
+
+git switch -c branche1
+git switch main
+git switch -c branche2
+
+→ Création de 2 branches à partir de main.
+
+3. MODIFIER LES BRANCHES
+
+Après chaque modification :
+
+git add .
+git commit -m "Modification"
+
+→ Enregistre les modifications dans Git.
+
+4. CRÉER LES SOUS-BRANCHES
+
+git switch branche1
+git switch -c branche1-2
+
+git switch branche2
+git switch -c branche2-2
+
+→ Création d'une nouvelle branche à partir de chacune des deux premières.
+
+5. MODIFIER LES 4 BRANCHES
+
+Sur chaque branche :
+
+git add .
+git commit -m "Modification"
+
+→ Chaque branche possède ses propres modifications.
+
+6. FUSIONNER DANS MAIN
+
+git switch main
+git merge branche1-2
+git merge branche2-2
+
+→ merge permet de réunir les modifications d'une branche dans une autre.
+
+S'il y a un conflit :
+
+1. Modifier le fichier pour garder toutes les informations voulues.
+2. Puis :
+
+git add .
+git commit -m "Resolution du conflit"
+
+7. VÉRIFIER L'HISTORIQUE
+
+git log --oneline --graph --all --decorate
+
+→ Affiche les branches, les commits et les merges.
+
+8. VÉRIFIER L'ÉTAT DU PROJET
+
+git status
+
+→ Vérifie qu'il ne reste aucune modification à enregistrer.
+
+Si tout est bon :
+
+nothing to commit, working tree clean
+
+COMMANDES À RETENIR
+
+git init = créer un dépôt Git
+git add . = préparer les fichiers
+git commit = enregistrer les modifications
+git switch = changer de branche
+git switch -c = créer une branche et aller dessus
+git merge = fusionner une branche
+git status = voir l'état du projet
+git log = voir l'historique
+git push = envoyer vers GitHub
+git pull = récupérer depuis GitHub
+git clone = récupérer un dépôt GitHub
+
+SCHÉMA
+
+Modifier
+↓
+git add .
+↓
+git commit
+↓
+Créer / changer de branche
+↓
+Modifier
+↓
+git merge
+↓
+main
+↓
+git push
+↓
+GitHub
